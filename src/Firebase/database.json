@@ -1,0 +1,13 @@
+{
+  "Humidity": 76.3,
+  "Manual1": false,
+  "Manual2": false,
+  "Pump_Status1": "ON",
+  "Pump_Status2": "ON",
+  "Soil_Moisture1": 0,
+  "Soil_Moisture2": 0,
+  "Temperature": 31.4,
+  "Trigger1": 50,
+  "Trigger2": 50,
+  "Water_Level": 0
+}

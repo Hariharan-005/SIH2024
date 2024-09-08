@@ -1,8 +1,8 @@
 // src/components/Dashboard.js
 
 import React, { useEffect, useState } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/database'; // Import Firebase Realtime Database
+import firebase from './Firebase/firebase';
+import './Firebase/database.json'; // Import Firebase Realtime Database
 
 const PumpButton = () => {
   const [data, setData] = useState(null);
@@ -11,13 +11,14 @@ const PumpButton = () => {
 
   // Initialize Firebase (replace with your config)
   const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID",
+    apiKey: "AIzaSyDhtfw6gwSz-9btNU5xGJ38pvPrnQwgiis",
+    authDomain: "soilsense-3ca63.firebaseapp.com",
+    databaseURL: "",
+    projectId: "soilsense-3ca63",
+    storageBucket: "soilsense-3ca63.appspot.com",
+    messagingSenderId: "337097967994",
+    appId: "1:337097967994:web:44b65de2d29f172bbd2ec3",
+    measurementId: "G-GMNSR7TM0M"
   };
 
   if (!firebase.apps.length) {
