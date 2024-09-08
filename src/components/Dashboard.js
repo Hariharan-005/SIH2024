@@ -80,6 +80,7 @@ const Dashboard = () => {
 
   return (
     <div style={styles.container}>
+      <h2 style={{color:'white', margin: '20px', padding: '20px' }}>Soil Sense</h2>
       <div style={styles.chartCard}>
         <h3 style={styles.cardTitle}>Temperature Forecast - Kelambakkam</h3>
         <Line data={temperatureData} options={options} />
@@ -144,12 +145,12 @@ const PumpButton = () => {
     setManual2(!manual2);
   };
 
-  if (!data || Object.keys(data).length === 0) {
-    return <div>Loading...</div>;
-  }
+  // if (!data || Object.keys(data).length === 0) {
+    // return <div>Loading...</div>;
+  // }
 
   return (
-    <div style={{ backgroundColor: '#1F2026', padding: '20px' }}>
+    <div style={styles.container1}>
       <h2 style={{ color: '#71F5DE' }}>Pump Control Dashboard</h2>
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -220,6 +221,15 @@ const styles = {
     color: '#fff',
     marginBottom: '10px',
     textAlign: 'center',
+  },
+  container1: {
+    backgroundColor: '#1F2026',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '20px',
+    height: '100vh',
   },
 };
 
