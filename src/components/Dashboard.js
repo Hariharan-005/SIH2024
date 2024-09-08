@@ -8,14 +8,14 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 const Dashboard = () => {
   // Data for Temperature Forecasting
   const temperatureData = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets: [
       {
         label: 'Kelambakkam - Temperature (°C)',
         data: [34, 35, 35, 35, 35, 36, 36],
         borderColor: '#71F5DE',  // Curve line color
         backgroundColor: 'rgba(113, 245, 222, 0.7)', // Lighter shade under the curve
-        borderWidth: 2, // Thinner curve line
+        borderWidth: 1, // Thinner curve line
         fill: origin, // Fill the area under the curve
         tension: 0.4, // Smooth curve
       },
@@ -24,14 +24,14 @@ const Dashboard = () => {
 
   // Data for Precipitation Forecasting
   const precipitationData = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets: [
       {
         label: 'Kelambakkam - Precipitation (%)',
         data: [25, 16, 60, 25, 4, 2, 25],
         borderColor: '#71F5DE',
         backgroundColor: 'rgba(113, 245, 222, 0.7)', // Lighter shade under the curve
-        borderWidth: 2, // Thinner curve line
+        borderWidth: 1, // Thinner curve line
         fill: true, // Fill the area under the curve
         tension: 0.4,
       },
