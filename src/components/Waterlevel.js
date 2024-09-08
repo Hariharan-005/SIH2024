@@ -12,27 +12,25 @@
 
 // ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
 
-// const Waterlevel = () => {
-//   const data = {
-//     labels: ['Water Level'], // corrected 'lavels' to 'labels'
-//     datasets: [ // corrected 'datassets' to 'datasets'
-//       {
-//         label: 'WaterLevel',
-//         data: [500],
-//         backgroundColor: '#61DBFB'
-//       }
-//     ]
-//   };
+const Waterlevel = () => {
+  const data = {
+    lavels: ['100','200','300','400','500'],
+    datassets: [
+      {
+        label: 'WaterLevel',
+        data: [300],
+        backgroundColor: '#61DBFB'
+      }
+    ]
+  }
+  const options = {
+    indexAxis: 'y'
+  }
+  return (
+    <div>
+    <Bar data={data} options={options}></Bar>
+    </div>
+  )
+  }
 
-//   const options = {
-//     indexAxis: 'y' // keep horizontal bars
-//   };
-
-//   return (
-//     <div>
-//       <Bar data={data} options={options}></Bar>
-//     </div>
-//   );
-// };
-
-// export default Waterlevel;
+export default Waterlevel;
