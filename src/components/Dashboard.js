@@ -1,9 +1,9 @@
 import React from 'react';
 import { Bar, Line } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, BarElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
 // Registering required Chart.js components
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend);
 
 const Dashboard = () => {
   // Data for Temperature Forecasting
@@ -45,7 +45,7 @@ const Dashboard = () => {
         {
           label: 'WaterLevel',
           data: [500],
-          backgroundColor: '#61DBFB'
+          backgroundColor: '#71F5DE'
         }
       ]
     };
@@ -89,7 +89,7 @@ const Dashboard = () => {
       </div>
       <div style={styles.chartCard}>
         <h3 style={styles.cardTitle}>Water level in the tank</h3>
-        <Line data={Waterlevel} options={options1} />
+        <Bar data={Waterlevel} options={options1} />
       </div>
     </div>
   );
