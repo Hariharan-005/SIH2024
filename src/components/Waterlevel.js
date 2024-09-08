@@ -13,7 +13,7 @@ import {
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
 
-const HorizontalBarChart = () => {
+const Waterlevel = () => {
   const data = {
     lavels: ['100','200','300','400','500'],
     datassets: [
@@ -34,4 +34,4 @@ const HorizontalBarChart = () => {
   )
   }
 
-export default HorizontalBarChart;
+export default Waterlevel;
