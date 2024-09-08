@@ -15,8 +15,8 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend)
 
 const Waterlevel = () => {
   const data = {
-    lavels: ['100','200','300','400','500'],
-    datassets: [
+    labels: ['100','200','300','400','500'],
+    datasets: [
       {
         label: 'WaterLevel',
         data: [300],
