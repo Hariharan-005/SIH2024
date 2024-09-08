@@ -233,4 +233,4 @@ const styles = {
   },
 };
 
-export { Dashboard, PumpButton };
+export { Dashboard };
