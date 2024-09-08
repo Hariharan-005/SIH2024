@@ -1,6 +1,6 @@
 // src/components/Dashboard.js
 
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import firebase from './Firebase/firebase';
 import './Firebase/database.json'; // Import Firebase Realtime Database
 
@@ -29,15 +29,11 @@ const PumpButton = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        const snapshot = await database.ref().get();
-        const data = snapshot.val();
-        setData(data);
-        setManual1(data.Manual1);
-        setManual2(data.Manual2);
-      } catch (error) {
-        console.error("Error fetching data: ", error);
-      }
+      const snapshot = await database.ref().get();
+      const data = snapshot.val() || {};  // Provide default empty object if data is undefined
+      setData(data);
+      setManual1(data.Manual1 || false);  // Default to false if undefined
+      setManual2(data.Manual2 || false);  // Default to false if undefined
     };
 
     fetchData();
@@ -73,7 +69,7 @@ const PumpButton = () => {
     setManual2(!manual2);
   };
 
-  if (!data) {
+  if (!data || Object.keys(data).length === 0) {  // Check if data is empty
     return <div>Loading...</div>;
   }
 
@@ -98,7 +94,7 @@ const PumpButton = () => {
             {manual1 ? 'Turn Off Pump 1' : 'Turn On Pump 1'}
           </button>
           <p style={{ color: '#fff' }}>
-            Status: {manual1 ? 'Manual (ON)' : `Auto (${data.Pump_Status1})`}
+            Status: {manual1 ? 'Manual (ON)' : `Auto (${data.Pump_Status1 || 'OFF'})`}
           </p>
         </div>
 
@@ -118,7 +114,7 @@ const PumpButton = () => {
             {manual2 ? 'Turn Off Pump 2' : 'Turn On Pump 2'}
           </button>
           <p style={{ color: '#fff' }}>
-            Status: {manual2 ? 'Manual (ON)' : `Auto (${data.Pump_Status2})`}
+            Status: {manual2 ? 'Manual (ON)' : `Auto (${data.Pump_Status2 || 'OFF'})`}
           </p>
         </div>
       </div>
@@ -126,4 +122,4 @@ const PumpButton = () => {
   );
 };
 
-export default PumpButton;
+export default PumpButton;*/
