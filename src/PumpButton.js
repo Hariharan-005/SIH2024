@@ -13,7 +13,7 @@ const PumpButton = () => {
   const firebaseConfig = {
     apiKey: "AIzaSyDhtfw6gwSz-9btNU5xGJ38pvPrnQwgiis",
     authDomain: "soilsense-3ca63.firebaseapp.com",
-    databaseURL: "",
+    databaseURL: "https://soilsense-3ca63-default-rtdb.asia-southeast1.firebasedatabase.app/",
     projectId: "soilsense-3ca63",
     storageBucket: "soilsense-3ca63.appspot.com",
     messagingSenderId: "337097967994",
