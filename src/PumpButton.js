@@ -29,11 +29,15 @@ const PumpButton = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const snapshot = await database.ref().get();
-      const data = snapshot.val();
-      setData(data);
-      setManual1(data.Manual1);
-      setManual2(data.Manual2);
+      try {
+        const snapshot = await database.ref().get();
+        const data = snapshot.val();
+        setData(data);
+        setManual1(data.Manual1);
+        setManual2(data.Manual2);
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
     };
 
     fetchData();
