@@ -1,5 +1,5 @@
 import React from 'react';
-import { Line } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
 // Registering required Chart.js components
@@ -38,6 +38,19 @@ const Dashboard = () => {
     ],
   };
 
+  //Water level 
+  const Waterlevel = {
+      labels: ['Water Level'], // corrected 'lavels' to 'labels'
+      datasets: [ // corrected 'datassets' to 'datasets'
+        {
+          label: 'WaterLevel',
+          data: [500],
+          backgroundColor: '#61DBFB'
+        }
+      ]
+    };
+
+
   // Chart configuration
   const options = {
     responsive: true,
@@ -58,6 +71,12 @@ const Dashboard = () => {
     },
   };
 
+  //options fo water level chart
+  const options1 = {
+    indexAxis: 'y' // keep horizontal bars
+  };
+
+
   return (
     <div style={styles.container}>
       <div style={styles.chartCard}>
@@ -67,6 +86,10 @@ const Dashboard = () => {
       <div style={styles.chartCard}>
         <h3 style={styles.cardTitle}>Precipitation Forecast - Kelambakkam</h3>
         <Line data={precipitationData} options={options} />
+      </div>
+      <div style={styles.chartCard}>
+        <h3 style={styles.cardTitle}>Water level in the tank</h3>
+        <Line data={Waterlevel} options={options1} />
       </div>
     </div>
   );
