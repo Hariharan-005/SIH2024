@@ -1,22 +1,21 @@
-import React from 'react';
-import { Bar, Chart } from 'react-chartjs-2';
+// import React from 'react';
+// import { Bar } from 'react-chartjs-2';
+// import {
+//   Chart as ChartJS,
+//   BarElement,
+//   CategoryScale,
+//   LinearScale,
+//   Tooltip,
+//   Title,
+//   Legend
+// } from 'chart.js';
 
-import {
-  Chart as ChartJS,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-  Tooltip,
-  Title,
-  Legend
-} from 'chart.js';
-
-ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
+// ChartJS.register(BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
 
 const Waterlevel = () => {
   const data = {
-    labels: ['100','200','300','400','500'],
-    datasets: [
+    lavels: ['100','200','300','400','500'],
+    datassets: [
       {
         label: 'WaterLevel',
         data: [300],
